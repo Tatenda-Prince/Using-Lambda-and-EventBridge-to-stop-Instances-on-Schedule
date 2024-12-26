@@ -75,7 +75,7 @@ Head back to create the role. Make sure to refresh the policies to include the n
 
 Continue to “Review”. Name and describe the role, then click “Create role”.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/45d55ebb85c4c75d8d8cb12fc06b9332227ac3bd/Images/Screenshot%202024-12-24%20131007.png)
 
 
 
