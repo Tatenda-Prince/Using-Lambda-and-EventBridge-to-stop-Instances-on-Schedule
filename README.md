@@ -78,6 +78,35 @@ Continue to “Review”. Name and describe the role, then click “Create role�
 ![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/45d55ebb85c4c75d8d8cb12fc06b9332227ac3bd/Images/Screenshot%202024-12-24%20131007.png)
 
 
+Head back to the Lambda’s “Create function” window. Refresh the existing roles, select the role previously created, then click “Create Function”.
+
+
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/9d40d557771cdcf21c9c016f839e3dc855e8bb5a/Images/Screenshot%202024-12-24%20131101.png)
+
+
+# Step 2: Deploy and Test Lambda Function
+
+In the overview window of your Lambda Function, below is the code we are going to use for the function’s code. You can also view it or clone it from my GitHub repo.
+
+This code uses the “boto3” Python library to interact with AWS services. In the “lambda_handler” function, we loop through all Instances to get their current state and tags.
+
+For each Instance tag, we loop through to find specific Instances that have the “Dev” tag and state is currently “running”. If both conditions are satisfied, we proceed to stop that Instance.
+
+Lastly, the function returns “success” for us to know it ran successfully.
+
+Proceed by copying the code above and pasting it your Lambda Function’s code tab, as seen below —
+
+
+![image alt]()
+
+Next, we will click “Deploy” to deploy the function’s code to the Lambda service, then click “Test” to test out the function based on a test case.
+
+For “Test event action”, select “Create a new event”, then name the event. We can use the JSON code below to test our Lambda function.
+
+Click “Save” to save the Test event.
+
+
+
 
 
 
