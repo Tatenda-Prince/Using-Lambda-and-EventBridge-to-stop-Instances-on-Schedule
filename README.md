@@ -61,7 +61,7 @@ A new window should open up. In that new window, select “AWS service”, selec
 ![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/54aa2398ef40049450e65297ab95d68d3e4084b8/Images/Screenshot%202024-12-26%20123326.png)
 
 
-Click “Create policy”, then select the “JSON” table to edit the policy. Copy and paste the JSON policy below in the policy box, then click “Next:Tags”.
+Click “Create policy”, then select the “JSON” table to edit the policy. Copy and paste the JSON policy below in the policy box, then click “Next:Tags”. Check the JSON fILE IN GITHUB.
 
 ![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/a1ff3f6f27952021f8d5c2625c5d359322e77183/Images/Screenshot%202024-12-24%20130533.png)
 
@@ -87,6 +87,10 @@ Head back to the Lambda’s “Create function” window. Refresh the existing r
 # Step 2: Deploy and Test Lambda Function
 
 In the overview window of your Lambda Function, below is the code we are going to use for the function’s code. You can also view it or clone it from my GitHub repo.
+
+
+![image alt]()
+
 
 This code uses the “boto3” Python library to interact with AWS services. In the “lambda_handler” function, we loop through all Instances to get their current state and tags.
 
