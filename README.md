@@ -58,7 +58,37 @@ You will then change the default execution role and use an exiting role. To crea
 
 A new window should open up. In that new window, select “AWS service”, select “Lambda”, then click “Next:Permissions” at the bottom right.
 
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/54aa2398ef40049450e65297ab95d68d3e4084b8/Images/Screenshot%202024-12-26%20123326.png)
+
+
+Click “Create policy”, then select the “JSON” table to edit the policy. Copy and paste the JSON policy below in the policy box, then click “Next:Tags”.
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "EC2StartStop1",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:StartInstances",
+                "ec2:DescribeTags",
+                "logs:*",
+                "ec2:DescribeInstanceTypes",
+                "ec2:StopInstances",
+                "ec2:DescribeInstanceStatus"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+
+
+Continue by clicking “Next: Review”. Name the policy, then click “Create policy”.
+
 ![image alt]()
+
 
 
 
