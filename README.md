@@ -63,7 +63,7 @@ A new window should open up. In that new window, select “AWS service”, selec
 
 Click “Create policy”, then select the “JSON” table to edit the policy. Copy and paste the JSON policy below in the policy box, then click “Next:Tags”.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/a1ff3f6f27952021f8d5c2625c5d359322e77183/Images/Screenshot%202024-12-24%20130533.png)
 
 
 Continue by clicking “Next: Review”. Name the policy, then click “Create policy”.
