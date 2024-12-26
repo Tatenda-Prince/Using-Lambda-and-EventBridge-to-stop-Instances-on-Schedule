@@ -190,6 +190,32 @@ After the time has elapsed, navigate to the EC2 dashboard and verify that the th
 You’ve successful created a Lambda function that stops all Development EC2 Instances and integrated it with Amazon EventBridge to schedule the function to run at a specified time.
 
 
+# More Insights
+
+In your Lambda Function, select the “Monitor” tab, then click “View CloudWatch logs”.
+
+![image alt]()
+
+
+In the CloudWatch window, you should see that the last event log stream’s “last event time” matches with the time we set from EventBridge, which was the last time the Lambda function was invoked.
+
+
+![image alt]()
+
+Further more, if you select the Lambda function’s log stream, you can see more detailed information when the Lambda function was executed.
+
+
+![image alt]()
+
+# Congratulations!
+You’ve reached the end. You’ve created a Lambda function triggered by an Amazon EventBridge schedule, which schedules the function to run at a specific time each day.
+
+
+
+
+
+
+
 
 
 
