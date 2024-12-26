@@ -205,7 +205,7 @@ In the CloudWatch window, you should see that the last event log stream’s “l
 Further more, if you select the Lambda function’s log stream, you can see more detailed information when the Lambda function was executed.
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/5eeac5de44fdc1b3c16623190358b5993ebb4f98/Images/Screenshot%202024-12-24%20134903.png)
 
 # Congratulations!
 You’ve reached the end. You’ve created a Lambda function triggered by an Amazon EventBridge schedule, which schedules the function to run at a specific time each day.
