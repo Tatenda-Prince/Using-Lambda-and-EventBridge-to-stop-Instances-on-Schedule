@@ -182,7 +182,7 @@ Continue by clicking “Next”, then click on “Save schedule” once you reac
 
 After the time has elapsed, navigate to the EC2 dashboard and verify that the three Development Instances have been stopped or are in the stopping state.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/4909338f0b99146fbb68e3661837871d6a5620e5/Images/Screenshot%202024-12-24%20134636.png)
 
 
 # Success!
