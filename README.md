@@ -89,7 +89,7 @@ Head back to the Lambda’s “Create function” window. Refresh the existing r
 In the overview window of your Lambda Function, below is the code we are going to use for the function’s code. You can also view it or clone it from my GitHub repo.
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/756d74ebf4f3ddf4934b66038dd396ae38f6a1db/Images/Screenshot%202024-12-24%20133952.png)
 
 
 This code uses the “boto3” Python library to interact with AWS services. In the “lambda_handler” function, we loop through all Instances to get their current state and tags.
