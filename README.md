@@ -46,7 +46,7 @@ You’ve decided to use a Lambda function using the Python runtime with EventBri
 Navigate to AWS Lambda in the AWS Management Console and click “Create Function”.
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/45c79ef783332d50e84af42cf5988d761f65d2fe/Images/Screenshot%202024-12-24%20130130.png)
 
 Select “Author from scratch”, name the function, then choose Python 3.7 or greater Runtime.
 
