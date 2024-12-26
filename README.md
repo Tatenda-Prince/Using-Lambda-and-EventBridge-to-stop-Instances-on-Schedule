@@ -128,7 +128,7 @@ Navigate to EventBridge, select “EventBridge Schedule” then click “Create 
 
 Name and describe (optional) your schedule and set “Schedule group” to default.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/1cd68df05c816ddf21d12c5bee04405df949bbbc/Images/Screenshot%202024-12-24%20131943.png)
 
 For “Schedule pattern” select “Recurring schedule” since we want the Lambda function to execute at 7pm every working day.
 
