@@ -194,7 +194,7 @@ You’ve successful created a Lambda function that stops all Development EC2 Ins
 
 In your Lambda Function, select the “Monitor” tab, then click “View CloudWatch logs”.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/0a83466fb14a25b893b87371dd3c82e044e0652d/Images/Screenshot%202024-12-24%20134732.png)
 
 
 In the CloudWatch window, you should see that the last event log stream’s “last event time” matches with the time we set from EventBridge, which was the last time the Lambda function was invoked.
