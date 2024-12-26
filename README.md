@@ -200,7 +200,7 @@ In your Lambda Function, select the “Monitor” tab, then click “View CloudW
 In the CloudWatch window, you should see that the last event log stream’s “last event time” matches with the time we set from EventBridge, which was the last time the Lambda function was invoked.
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/e7eb8a1a98040f498b906ed4b61fd88d84dac322/Images/Screenshot%202024-12-24%20134844.png)
 
 Further more, if you select the Lambda function’s log stream, you can see more detailed information when the Lambda function was executed.
 
