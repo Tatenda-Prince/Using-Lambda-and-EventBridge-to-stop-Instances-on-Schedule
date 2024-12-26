@@ -141,7 +141,7 @@ Select “Cron-based schedule” and use the cron expression as seen below, then
 Select “AWS Lambda — Invoke”, choose your Lambda function, then click “Next”.
 
 
-![imagea alt]()
+![imagea alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/8947ec13d1b1d8b88fbaeaf58ee484e5dc95a29b/Images/Screenshot%202024-12-24%20132241.png)
 
 Continue to the “Review and create schedule”, then click “Create schedule”.
 
