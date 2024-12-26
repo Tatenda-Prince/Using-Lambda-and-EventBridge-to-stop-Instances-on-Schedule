@@ -50,7 +50,15 @@ Navigate to AWS Lambda in the AWS Management Console and click “Create Functio
 
 Select “Author from scratch”, name the function, then choose Python 3.7 or greater Runtime.
 
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/41de6dae535d82886821b57dcb50aa253aec07a9/Images/Screenshot%202024-12-24%20130217.png)
+
+You will then change the default execution role and use an exiting role. To create this role select “IAM Console”.
+
 ![image alt]()
+
+A new window should open up. In that new window, select “AWS service”, select “Lambda”, then click “Next:Permissions” at the bottom right.
+
+
 
 
 
