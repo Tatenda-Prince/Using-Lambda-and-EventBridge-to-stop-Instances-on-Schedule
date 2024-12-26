@@ -97,13 +97,26 @@ Lastly, the function returns “success” for us to know it ran successfully.
 Proceed by copying the code above and pasting it your Lambda Function’s code tab, as seen below —
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/00efa17f19ac5240b048a65e062563e626f7eafa/Images/Screenshot%202024-12-24%20131600.png)
 
 Next, we will click “Deploy” to deploy the function’s code to the Lambda service, then click “Test” to test out the function based on a test case.
 
 For “Test event action”, select “Create a new event”, then name the event. We can use the JSON code below to test our Lambda function.
 
 Click “Save” to save the Test event.
+
+{ 
+  "key1": "value1",
+  "key2": "value2",
+  "key3": "value3",
+}
+
+
+![image alt]()
+
+
+
+
 
 
 
