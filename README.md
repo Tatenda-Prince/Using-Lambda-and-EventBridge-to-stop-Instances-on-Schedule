@@ -135,7 +135,7 @@ For “Schedule pattern” select “Recurring schedule” since we want the Lam
 Select “Cron-based schedule” and use the cron expression as seen below, then click “Next”.
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/42dca648f630a310ff2d99e70d54ae3ef2224e3f/Images/Screenshot%202024-12-24%20132118.png)
 
 
 Select “AWS Lambda — Invoke”, choose your Lambda function, then click “Next”.
