@@ -69,7 +69,17 @@ Click “Create policy”, then select the “JSON” table to edit the policy. 
 Continue by clicking “Next: Review”. Name the policy, then click “Create policy”.
 
 
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/9fd4f098cf33036ccd87c07857e74e6c6555f450/Images/Screenshot%202024-12-24%20130736.png)
+
+Head back to create the role. Make sure to refresh the policies to include the new policy just created. Now search for the policy, select it, then click “Next:Tags”.
+
+Continue to “Review”. Name and describe the role, then click “Create role”.
+
 ![image alt]()
+
+
+
+
 
 
 
