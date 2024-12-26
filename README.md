@@ -122,6 +122,43 @@ We can now test our function by clicking ‘Test”. A “success” response, a
 
 Now that we’ve set up and created our Lambda function and also tested its successful functionality, we can now proceed to Step 3 — Using EventBridge to schedule our function to run at a set time of the day and days of the week.
 
+# Step 3: Create an EventBridge Schedule to schedule the Lambda function
+
+Navigate to EventBridge, select “EventBridge Schedule” then click “Create Rule”.
+
+Name and describe (optional) your schedule and set “Schedule group” to default.
+
+![image alt]()
+
+For “Schedule pattern” select “Recurring schedule” since we want the Lambda function to execute at 7pm every working day.
+
+Select “Cron-based schedule” and use the cron expression as seen below, then click “Next”.
+
+
+![image alt]()
+
+
+Select “AWS Lambda — Invoke”, choose your Lambda function, then click “Next”.
+
+
+![imagea alt]()
+
+Continue to the “Review and create schedule”, then click “Create schedule”.
+
+You should now be able to see the new Schedule just created in EventBridge.
+
+![image alt]()
+
+
+Now that we’ve scheduled the execution of our Lambda function, we can proceed to Step 4 — Automating the launching of Dev EC2 Instances.
+
+
+
+
+
+
+
+
 
 
 
