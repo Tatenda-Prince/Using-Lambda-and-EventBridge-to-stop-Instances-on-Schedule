@@ -163,7 +163,7 @@ You can also view this code or clone the repo from my GitHub.
 
 After creating the script and running it, you should be able to see three new Development EC2 Instances created in the EC2 dashboard. If you select either one of the EC2 Instances and click on the “Tags” tab, you should notice a key:value pair tag — “Environment: Dev”.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/96e81bc5eee2b89bc17d6d05c18c8b60ac925a04/Images/Screenshot%202024-12-24%20133901.png)
 
 
 We can now proceed to Step 5 — Verifying the functionality of our Lambda function and EventBridge.
