@@ -147,10 +147,48 @@ Continue to the “Review and create schedule”, then click “Create schedule�
 
 You should now be able to see the new Schedule just created in EventBridge.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/305ad20c1d73f7dd740deb8f0a6adcb256b51ad3/Images/Screenshot%202024-12-24%20132342.png)
 
 
 Now that we’ve scheduled the execution of our Lambda function, we can proceed to Step 4 — Automating the launching of Dev EC2 Instances.
+
+# Step 4: Automating Dev EC2 Instances launch
+
+Before we can test our Lambda Function and EventBridge operational functionality, we can use the source code below to create a Python script to automate the launch of three new EC2 Instances with tags “Environment: Dev”.
+
+For our test to be successful, the three Development Instances created should stop once the Lambda function runs according to the schedule set by EventBridge.
+
+You can also view this code or clone the repo from my GitHub.
+
+
+After creating the script and running it, you should be able to see three new Development EC2 Instances created in the EC2 dashboard. If you select either one of the EC2 Instances and click on the “Tags” tab, you should notice a key:value pair tag — “Environment: Dev”.
+
+![image alt]()
+
+
+We can now proceed to Step 5 — Verifying the functionality of our Lambda function and EventBridge.
+
+
+# Step 5: Verify Lambda Function and EventBridge functionality
+
+Navigate back to EventBridge and edit the Schedule created earlier. We need to make changes to the next scheduled time so we don’t have to wait until 7pm to verify if the Instances were stopped.
+
+To accomplish this effectively, change the “Schedule pattern” occurrence to “One-time schedule”, set the “Date and time” to the current date and the time to 3–5 minutes in the future to limit wait time.
+
+![image alt]()
+
+
+Continue by clicking “Next”, then click on “Save schedule” once you reach the “Review and save schedule” step.
+
+After the time has elapsed, navigate to the EC2 dashboard and verify that the three Development Instances have been stopped or are in the stopping state.
+
+![image alt]()
+
+
+# Success!
+
+You’ve successful created a Lambda function that stops all Development EC2 Instances and integrated it with Amazon EventBridge to schedule the function to run at a specified time.
+
 
 
 
