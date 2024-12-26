@@ -175,7 +175,7 @@ Navigate back to EventBridge and edit the Schedule created earlier. We need to m
 
 To accomplish this effectively, change the “Schedule pattern” occurrence to “One-time schedule”, set the “Date and time” to the current date and the time to 3–5 minutes in the future to limit wait time.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/04598e1231afd1dfa52250e41bcbc0df21cf7768/Images/Screenshot%202024-12-24%20134249.png)
 
 
 Continue by clicking “Next”, then click on “Save schedule” once you reach the “Review and save schedule” step.
