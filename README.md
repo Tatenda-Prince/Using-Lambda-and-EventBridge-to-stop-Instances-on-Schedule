@@ -206,6 +206,33 @@ For our test to be successful, the three Development Instances created should st
 
 You can also view this code or clone the repo from my GitHub.
 
+```language
+import boto3
+
+ec2_resource = boto3.resource('ec2') #Invoke the resource for EC2
+
+instances = ec2_resource.create_instances( 
+    #Arguments to launch EC2 Instances
+    MinCount = 3,
+    MaxCount = 3,
+    ImageId = 'ami-0aa7d40eeae50c9a9',
+    InstanceType ='t2.micro',
+    KeyName = 'marioKeypair',
+    TagSpecifications=[
+        {
+            'ResourceType': 'instance',
+            'Tags': [{'Key': 'Name','Value': 'Dev Instance Server'}, 
+            {'Key': 'Environment','Value': 'Dev'}]
+            
+        }
+        ]
+    )
+
+#Print results of created EC2 Instances
+print(len(instances), "Dev Instance Servers were created and the instances IDs created were:\n, instances.id")
+```
+
+
 
 After creating the script and running it, you should be able to see three new Development EC2 Instances created in the EC2 dashboard. If you select either one of the EC2 Instances and click on the “Tags” tab, you should notice a key:value pair tag — “Environment: Dev”.
 
