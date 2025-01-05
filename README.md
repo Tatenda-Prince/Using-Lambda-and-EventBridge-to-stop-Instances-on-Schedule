@@ -13,19 +13,19 @@ Today we will create a Lambda function that uses the Boto3 library to automate t
 
 # Background
 
-# Boto3
+## Boto3
 
 Boto3 provides a Python API for AWS infrastructure services. Using the SDK for Python, you can directly create, update and delete AWS resources using Python scripts.
 
-# AWS Lambda
+## AWS Lambda
 
 Lambda is a serverless compute service that runs your code as functions in response to events and automatically manages the underlying compute resources for you.
 
-# AWS EventBridge
+## AWS EventBridge
 
 EventBridge is also a serverlesss event bus service that makes it easy to connect your applications with data from a variety of sources. It can be used to build an application that reacts to events from SaaS applications, AWS services or Custom applications.
 
-# Prerequisites
+## Prerequisites
 
 WS Account with an IAM User
 
@@ -61,9 +61,30 @@ A new window should open up. In that new window, select “AWS service”, selec
 ![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/54aa2398ef40049450e65297ab95d68d3e4084b8/Images/Screenshot%202024-12-26%20123326.png)
 
 
-Click “Create policy”, then select the “JSON” table to edit the policy. Copy and paste the JSON policy below in the policy box, then click “Next:Tags”. Check the JSON fILE IN GITHUB.
+Click “Create policy”, then select the “JSON” table to edit the policy. Copy and paste the JSON policy below in the policy box, then click “Next:Tags”.
 
-![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/a1ff3f6f27952021f8d5c2625c5d359322e77183/Images/Screenshot%202024-12-24%20130533.png)
+```language
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "EC2StartStop1",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:StartInstances",
+                "ec2:DescribeTags",
+                "logs:*",
+                "ec2:DescribeInstanceTypes",
+                "ec2:StopInstances",
+                "ec2:DescribeInstanceStatus"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
 
 
 Continue by clicking “Next: Review”. Name the policy, then click “Create policy”.
@@ -88,15 +109,34 @@ Head back to the Lambda’s “Create function” window. Refresh the existing r
 
 In the overview window of your Lambda Function, below is the code we are going to use for the function’s code. You can also view it or clone it from my GitHub repo.
 
-
-![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/756d74ebf4f3ddf4934b66038dd396ae38f6a1db/Images/Screenshot%202024-12-24%20133952.png)
-
-
 This code uses the “boto3” Python library to interact with AWS services. In the “lambda_handler” function, we loop through all Instances to get their current state and tags.
 
 For each Instance tag, we loop through to find specific Instances that have the “Dev” tag and state is currently “running”. If both conditions are satisfied, we proceed to stop that Instance.
 
 Lastly, the function returns “success” for us to know it ran successfully.
+
+```python
+import json
+import boto3
+
+ec2_resource = boto3.resource('ec2', region_name='us-east-1')
+
+def lambda_handler(event, context):
+    instances = ec2_resource.instances.all() #Create iterable of all Instances.
+
+    for instance in instances: #interate through all intances
+        instance_state = instance.state["Name"] #get instance state
+        tag = instance.tags #get instance tags
+    
+        for tag in instance.tags:
+            if ("Dev" == tag['Value']) & (instance_state == 'running'): #check if instance is running and if tag is is Dev Instance
+                stop_instance = instance.stop() #Stop instance if condition is satisfied
+            
+                print('Stopped your Dev instance - ' + str(instance.id))
+    
+    return "success"
+```
+
 
 Proceed by copying the code above and pasting it your Lambda Function’s code tab, as seen below —
 
@@ -109,11 +149,13 @@ For “Test event action”, select “Create a new event”, then name the even
 
 Click “Save” to save the Test event.
 
+```language
 { 
   "key1": "value1",
   "key2": "value2",
   "key3": "value3",
 }
+```
 
 
 ![image alt](https://github.com/Tatenda-Prince/Using-Lambda-and-EventBridge-to-stop-Instances-on-Schedule/blob/ea75e658754bce0fcde864d9746e9a32e9ec0bbc/Images/Screenshot%202024-12-24%20131650.png)
